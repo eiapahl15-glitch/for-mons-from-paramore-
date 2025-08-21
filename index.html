@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Mons</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f8d4e8, #ffdfe4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #fff;
+    margin-bottom: 12px;
+  }
+
+  #arrow {
+    font-size: 42px;
+    margin-bottom: 16px;
+    animation: bounce 1s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  button {
+    padding: 22px 44px;
+    font-size: 28px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.08);
+  }
+
+  #message {
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 28px 45px;
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  #message.show {
+    display: block;
+    opacity: 1;
+  }
+</style>
+<body>
+
+  <div id="intro">
+    <h2>hi mons :)</h2>
+    <div id="arrow">👇</div>
+    <button id="myButton" onclick="showMessage()">press here</button>
+  </div>
+
+  <div id="message">
+    good luck on your exams, mons!<br>rooting for you 🤍
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('intro').style.display = 'none';
+      var msg = document.getElementById('message');
+      msg.style.display = 'block';
+      setTimeout(function() {
+        msg.classList.add('show');
+      }, 50);
+    }
+  </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
